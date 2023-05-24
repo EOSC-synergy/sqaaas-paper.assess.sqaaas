@@ -1,15 +1,15 @@
 config:
-  credentials: []
+  credentials:
+  - id: sqaaas_tmp_cred-cranky-copper-echidna
+    password_var: GIT_PASSWORD
+    username_var: GIT_USER
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: release/1.7.10
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/orviz/sqaaas-paper:
       branch: master
-      credential_id:
-        secret_id: ''
-        token: gAAAAABkbIKfe5LaYENYV9lzdlbgpeqOXL9Wreklkn6pogNTwyG1Kc8ohzwEhP4uJ5sWYFw9yTGXlzl8n1Z9ha6zOL0OGVwIOJpuxE3rmBQEQmrA6x7tO3IWgTTToEdol3OW7hKI0hIC
-        user_id: gAAAAABkbIKfP5hM_cA9gg5vr78oNAtrx9y-fDTEYbK26UXJNR6ZKXyUFicNORvfNfYgd92yhEOIa960J9qRPLrUpm8K9OvFJQ==
+      credentials_id: sqaaas_tmp_cred-cranky-copper-echidna
       repo: https://github.com/orviz/sqaaas-paper
 environment:
   JPL_DOCKERFORCEBUILD: enabled
@@ -19,32 +19,32 @@ sqa_criteria:
     repos:
       github.com/orviz/sqaaas-paper git:
         commands:
-        - /usr/bin/env sh .sqa/script.clammy-magnolia-slug.sh
-        container: qc.acc_lumpy-vermilion-meerkat
+        - /usr/bin/env sh .sqa/script.bumpy-khaki-wallaby.sh
+        container: qc.acc_crabby-lavender-mandrill
   QC.Doc:
     repos:
       github.com/orviz/sqaaas-paper find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.stinky-azure-butterfly.sh
-        container: qc.doc_geeky-cinnamon-dingo
+        - /usr/bin/env sh .sqa/script.scanty-carmine-oriole.sh
+        container: qc.doc_ready-linen-wolfhound
       github.com/orviz/sqaaas-paper git:
         commands:
-        - /usr/bin/env sh .sqa/script.flabby-flax-rhinoceros.sh
-        container: qc.doc_slaphappy-sapphire-monkey
+        - /usr/bin/env sh .sqa/script.scummy-heliotrope-scorpion.sh
+        container: qc.doc_ready-russet-neanderthal
       github.com/orviz/sqaaas-paper markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.gimpy-lime-serval.sh
-        container: qc.doc_skimpy-chocolate-turtle
+        - /usr/bin/env sh .sqa/script.freaky-maroon-centipede.sh
+        container: qc.doc_shaky-scarlet-weasel
   QC.Lic:
     repos:
       github.com/orviz/sqaaas-paper licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.squirrely-beige-paradise.sh
-        container: qc.lic_squirrely-amaranth-hyrax
+        - /usr/bin/env sh .sqa/script.gloppy-champagne-buzzard.sh
+        container: qc.lic_bluesy-red-cow
   QC.Ver:
     repos:
       github.com/orviz/sqaaas-paper get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.snippy-corn-heron.sh
-        container: qc.ver_homely-harlequin-nightingale
+        - /usr/bin/env sh .sqa/script.queasy-plum-cockroach.sh
+        container: qc.ver_snappy-silver-fousek
 timeout: 5400
