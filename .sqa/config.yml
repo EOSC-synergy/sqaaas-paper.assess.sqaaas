@@ -1,16 +1,16 @@
 config:
   credentials:
-  - id: test1
+  - id: sqaaas_tmp_cred-tacky-razzmatazz-fowl
     password_var: GIT_PASSWORD
     username_var: GIT_USER
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.7.10
+      branch: release/1.7.11
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/orviz/sqaaas-paper:
       branch: master
       credential_tmp: true
-      credentials_id: test1
+      credentials_id: sqaaas_tmp_cred-tacky-razzmatazz-fowl
       repo: https://github.com/orviz/sqaaas-paper
 environment:
   JPL_DOCKERFORCEBUILD: enabled
@@ -20,32 +20,32 @@ sqa_criteria:
     repos:
       github.com/orviz/sqaaas-paper git:
         commands:
-        - /usr/bin/env sh .sqa/script.sloppy-denim-snail.sh
-        container: qc.acc_frumpy-blue-shrimp
+        - /usr/bin/env sh .sqa/script.woolly-russet-bulldog.sh
+        container: qc.acc_craggy-tan-scorpion
   QC.Doc:
     repos:
       github.com/orviz/sqaaas-paper find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.greasy-tomato-turtle.sh
-        container: qc.doc_stinky-viridian-lizard
+        - /usr/bin/env sh .sqa/script.randy-orchid-chihuahua.sh
+        container: qc.doc_homely-purple-duck
       github.com/orviz/sqaaas-paper git:
         commands:
-        - /usr/bin/env sh .sqa/script.crabby-pumpkin-mau.sh
-        container: qc.doc_blurry-cobalt-grasshopper
+        - /usr/bin/env sh .sqa/script.trippy-ivory-bordeaux.sh
+        container: qc.doc_scaly-thistle-ragdoll
       github.com/orviz/sqaaas-paper markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.skimpy-pink-markhor.sh
-        container: qc.doc_sleepy-orange-rat
+        - /usr/bin/env sh .sqa/script.squeaky-pumpkin-seal.sh
+        container: qc.doc_lumpy-brass-zorse
   QC.Lic:
     repos:
       github.com/orviz/sqaaas-paper licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.fuzzy-linen-lemur.sh
-        container: qc.lic_goopy-salmon-forest
+        - /usr/bin/env sh .sqa/script.trippy-magenta-duck.sh
+        container: qc.lic_cloudy-ruby-frog
   QC.Ver:
     repos:
       github.com/orviz/sqaaas-paper get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.freaky-carmine-flounder.sh
-        container: qc.ver_pokey-indigo-fox
+        - /usr/bin/env sh .sqa/script.randy-silver-devil.sh
+        container: qc.ver_thirsty-jade-ragdoll
 timeout: 5400
