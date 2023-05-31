@@ -1,6 +1,6 @@
 config:
   credentials:
-  - id: sqaaas_tmp_cred-gimpy-sangria-ferret
+  - id: test1
     password_var: GIT_PASSWORD
     username_var: GIT_USER
   project_repos:
@@ -10,7 +10,7 @@ config:
     github.com/orviz/sqaaas-paper:
       branch: master
       credential_tmp: true
-      credentials_id: sqaaas_tmp_cred-gimpy-sangria-ferret
+      credentials_id: test1
       repo: https://github.com/orviz/sqaaas-paper
 environment:
   JPL_DOCKERFORCEBUILD: enabled
