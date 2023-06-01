@@ -1,6 +1,6 @@
 config:
   credentials:
-  - id: sqaaas_tmp_cred-tacky-razzmatazz-fowl
+  - id: sqaaas_tmp_cred-homey-aquamarine-gopher
     password_var: GIT_PASSWORD
     username_var: GIT_USER
   project_repos:
@@ -10,7 +10,7 @@ config:
     github.com/orviz/sqaaas-paper:
       branch: master
       credential_tmp: true
-      credentials_id: sqaaas_tmp_cred-tacky-razzmatazz-fowl
+      credentials_id: sqaaas_tmp_cred-homey-aquamarine-gopher
       repo: https://github.com/orviz/sqaaas-paper
 environment:
   JPL_DOCKERFORCEBUILD: enabled
@@ -20,32 +20,32 @@ sqa_criteria:
     repos:
       github.com/orviz/sqaaas-paper git:
         commands:
-        - /usr/bin/env sh .sqa/script.woolly-russet-bulldog.sh
-        container: qc.acc_craggy-tan-scorpion
+        - /usr/bin/env sh .sqa/script.bluesy-beige-cichlid.sh
+        container: qc.acc_shaggy-emerald-uakari
   QC.Doc:
     repos:
       github.com/orviz/sqaaas-paper find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.randy-orchid-chihuahua.sh
-        container: qc.doc_homely-purple-duck
+        - /usr/bin/env sh .sqa/script.stealthy-amethyst-forest.sh
+        container: qc.doc_hasty-russet-baboon
       github.com/orviz/sqaaas-paper git:
         commands:
-        - /usr/bin/env sh .sqa/script.trippy-ivory-bordeaux.sh
-        container: qc.doc_scaly-thistle-ragdoll
+        - /usr/bin/env sh .sqa/script.tacky-taupe-orangutan.sh
+        container: qc.doc_chewy-fuchsia-coyote
       github.com/orviz/sqaaas-paper markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.squeaky-pumpkin-seal.sh
-        container: qc.doc_lumpy-brass-zorse
+        - /usr/bin/env sh .sqa/script.snippy-carmine-penguin.sh
+        container: qc.doc_surly-black-moth
   QC.Lic:
     repos:
       github.com/orviz/sqaaas-paper licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.trippy-magenta-duck.sh
-        container: qc.lic_cloudy-ruby-frog
+        - /usr/bin/env sh .sqa/script.flaky-sapphire-coyote.sh
+        container: qc.lic_tacky-asparagus-chipmunk
   QC.Ver:
     repos:
       github.com/orviz/sqaaas-paper get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.randy-silver-devil.sh
-        container: qc.ver_thirsty-jade-ragdoll
+        - /usr/bin/env sh .sqa/script.stealthy-carmine-sponge.sh
+        container: qc.ver_shaggy-orchid-mule
 timeout: 5400
