@@ -1,6 +1,6 @@
 config:
   credentials:
-  - id: sqaaas_tmp_cred-craggy-gamboge-sponge
+  - id: sqaaas_tmp_cred-flaky-turquoise-mist
     password_var: GIT_PASSWORD
     username_var: GIT_USER
   project_repos:
@@ -10,7 +10,7 @@ config:
     github.com/orviz/sqaaas-paper:
       branch: master
       credential_tmp: true
-      credentials_id: sqaaas_tmp_cred-craggy-gamboge-sponge
+      credentials_id: sqaaas_tmp_cred-flaky-turquoise-mist
       repo: https://github.com/orviz/sqaaas-paper
 environment:
   JPL_DOCKERFORCEBUILD: enabled
@@ -20,32 +20,32 @@ sqa_criteria:
     repos:
       github.com/orviz/sqaaas-paper git:
         commands:
-        - /usr/bin/env sh .sqa/script.hasty-khaki-chamois.sh
-        container: qc.acc_boozy-chartreuse-beetle
+        - /usr/bin/env sh .sqa/script.woozy-seashell-otter.sh
+        container: qc.acc_wiggy-burgundy-boar
   QC.Doc:
     repos:
       github.com/orviz/sqaaas-paper find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.leaky-goldenrod-weasel.sh
-        container: qc.doc_pokey-orchid-bird
+        - /usr/bin/env sh .sqa/script.randy-plum-crane.sh
+        container: qc.doc_muzzy-smalt-swan
       github.com/orviz/sqaaas-paper git:
         commands:
-        - /usr/bin/env sh .sqa/script.foggy-brown-malamute.sh
-        container: qc.doc_hilly-beige-dhole
+        - /usr/bin/env sh .sqa/script.bluesy-linen-hyena.sh
+        container: qc.doc_homey-cornflower-hummingbird
       github.com/orviz/sqaaas-paper markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.crabby-amethyst-ocelot.sh
-        container: qc.doc_baggy-taupe-crane
+        - /usr/bin/env sh .sqa/script.hasty-dandelion-birman.sh
+        container: qc.doc_cheeky-pink-wildebeest
   QC.Lic:
     repos:
       github.com/orviz/sqaaas-paper licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.crappy-flax-dragon.sh
-        container: qc.lic_pretty-crimson-rhinoceros
+        - /usr/bin/env sh .sqa/script.homely-malachite-monster.sh
+        container: qc.lic_surly-fuchsia-emu
   QC.Ver:
     repos:
       github.com/orviz/sqaaas-paper get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.greasy-harlequin-meerkat.sh
-        container: qc.ver_foggy-gamboge-bonobo
+        - /usr/bin/env sh .sqa/script.goopy-smalt-hornet.sh
+        container: qc.ver_dorky-bronze-mammoth
 timeout: 5400
